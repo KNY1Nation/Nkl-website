@@ -204,33 +204,67 @@ function handleImageErrors() {
     images.forEach(img => {
         img.addEventListener('error', function() {
             console.warn(`Image failed to load: ${this.src}`);
-            // Créer un placeholder avec du CSS
-            this.style.display = 'none';
             
+            // Créer un placeholder avec du CSS
             const placeholder = document.createElement('div');
             placeholder.className = 'image-placeholder';
-            placeholder.style.cssText = `
-                width: ${this.offsetWidth || 200}px;
-                height: ${this.offsetHeight || 200}px;
-                background: linear-gradient(135deg, var(--color-secondary), var(--color-border));
-                border-radius: var(--radius-lg);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: var(--color-text-secondary);
-                font-size: var(--font-size-sm);
-                text-align: center;
-                border: 2px dashed var(--color-border);
-            `;
             
-            if (this.alt.includes('personnage') || this.alt.includes('kanak')) {
-                placeholder.innerHTML = '👤<br>Personnage<br>Kanak';
-            } else if (this.alt.includes('logo') || this.alt.includes('Logo')) {
-                placeholder.innerHTML = '🏠<br>Logo<br>Newkal';
+            // Déterminer le type d'image et définir la taille appropriée
+            let width = this.offsetWidth || 200;
+            let height = this.offsetHeight || 200;
+            
+            // Cas spéciaux pour les images d'exemples
+            if (this.classList.contains('example-img')) {
+                width = '100%';
+                height = '200px';
+                placeholder.style.cssText = `
+                    width: ${width};
+                    height: ${height};
+                    background: linear-gradient(135deg, var(--color-secondary), var(--color-border));
+                    border-radius: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--color-text-secondary);
+                    font-size: var(--font-size-sm);
+                    text-align: center;
+                    border: 2px dashed var(--color-border);
+                    flex-direction: column;
+                    gap: var(--space-8);
+                `;
             } else {
-                placeholder.innerHTML = '🖼️<br>Image<br>indisponible';
+                placeholder.style.cssText = `
+                    width: ${typeof width === 'number' ? width + 'px' : width};
+                    height: ${typeof height === 'number' ? height + 'px' : height};
+                    background: linear-gradient(135deg, var(--color-secondary), var(--color-border));
+                    border-radius: var(--radius-lg);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--color-text-secondary);
+                    font-size: var(--font-size-sm);
+                    text-align: center;
+                    border: 2px dashed var(--color-border);
+                    flex-direction: column;
+                    gap: var(--space-4);
+                `;
             }
             
+            // Déterminer le contenu du placeholder
+            if (this.alt.includes('personnage') || this.alt.includes('kanak') || this.alt.includes('Membre')) {
+                placeholder.innerHTML = '<div style="font-size: 2em;">👤</div><div>Personnage<br>Kanak</div>';
+            } else if (this.alt.includes('logo') || this.alt.includes('Logo')) {
+                placeholder.innerHTML = '<div style="font-size: 2em;">🏠</div><div>Logo<br>Newkal</div>';
+            } else if (this.alt.includes('coutume') || this.alt.includes('Participation')) {
+                placeholder.innerHTML = '<div style="font-size: 2em;">🎯</div><div>Participation<br>aux coutumes</div>';
+            } else if (this.alt.includes('tourisme') || this.alt.includes('QR') || this.alt.includes('sentiers')) {
+                placeholder.innerHTML = '<div style="font-size: 2em;">🥾</div><div>Tourisme<br>respectueux</div>';
+            } else {
+                placeholder.innerHTML = '<div style="font-size: 2em;">🖼️</div><div>Image<br>indisponible</div>';
+            }
+            
+            // Remplacer l'image par le placeholder
+            this.style.display = 'none';
             this.parentNode.insertBefore(placeholder, this);
         });
     });
