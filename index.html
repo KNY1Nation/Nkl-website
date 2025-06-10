@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newkal (NKL) - Communauté Numérique du Pacifique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex items-center justify-between">
+            <div class="nav-logo flex items-center gap-8">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1749535875/gpt4o_images/nvrdgncs01oxkdfrq3z2.png" alt="Logo Newkal" class="logo">
+                <span class="logo-text">Newkal</span>
+            </div>
+            <div class="nav-links">
+                <a href="#accueil" class="nav-link">Accueil</a>
+                <a href="#a-propos" class="nav-link">À propos</a>
+                <a href="#fonctionnement" class="nav-link">Fonctionnement</a>
+                <a href="#participer" class="nav-link">Participer</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="case-symbol">🏠</span>
+                    La Case Numérique
+                </h1>
+                <p class="hero-subtitle">
+                    Construisons ensemble une communauté moderne respectueuse des traditions du Pacifique
+                </p>
+                <p class="hero-description">
+                    Newkal réunit la symbolique traditionnelle de la <strong>case</strong> et du <strong>poteau central</strong> 
+                    avec les outils numériques pour créer un espace de respect, d'unité et de réparation.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn--primary btn--lg" onclick="scrollToSection('fonctionnement')">
+                        Découvrir le concept
+                    </button>
+                    <button class="btn btn--outline btn--lg" onclick="scrollToSection('participer')">
+                        Rejoindre la communauté
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1749535823/gpt4o_images/oywsjemcq79nllaldpoq.png" alt="Membre de la communauté Newkal" class="hero-person">
+                <div class="floating-elements">
+                    <div class="floating-icon respect">🤝</div>
+                    <div class="floating-icon unity">🌊</div>
+                    <div class="floating-icon repair">🌿</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="a-propos" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>La Philosophie Newkal</h2>
+                <p class="section-subtitle">Une approche moderne des valeurs traditionnelles</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon case-icon">🏠</div>
+                    <h3>La Case</h3>
+                    <p>Espace communautaire traditionnel kanak qui accueille et protège. Notre plateforme numérique reproduit cette symbolique d'accueil et de partage.</p>
+                </div>
+                
+                <div class="about-card central">
+                    <div class="card-icon pillar-icon">⚡</div>
+                    <h3>Le Poteau Central</h3>
+                    <p>Symbolise le peuple Kanak au centre de la communauté. Chaque membre contribue à la force collective de notre écosystème numérique.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon gestures-icon">🤲</div>
+                    <h3>Les Gestes Numériques</h3>
+                    <p>Respect, unité, réparation : trois gestes fondamentaux transformés en actions numériques pour préserver et honorer nos traditions.</p>
+                </div>
+            </div>
+
+            <div class="values-section">
+                <h3>Nos Valeurs Fondamentales</h3>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <span class="value-emoji">🎭</span>
+                        <span class="value-text">Coutume</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-emoji">🤝</span>
+                        <span class="value-text">Solidarité</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-emoji">🏛️</span>
+                        <span class="value-text">Souveraineté</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fonctionnement -->
+    <section id="fonctionnement" class="functionality">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comment Ça Fonctionne</h2>
+                <p class="section-subtitle">Exemples concrets d'utilisation</p>
+            </div>
+
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">🎯</div>
+                        <h3>Participation à Distance aux Coutumes</h3>
+                    </div>
+                    <div class="example-content">
+                        <p>Permettre aux membres de la communauté éloignés de participer aux cérémonies importantes par des gestes numériques.</p>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> Un membre kanak ne pouvant assister physiquement à une cérémonie peut envoyer un geste de respect via l'application, contribuant symboliquement à l'événement.
+                        </div>
+                        <div class="example-steps">
+                            <div class="step">1. Notification de cérémonie</div>
+                            <div class="step">2. Envoi du geste numérique</div>
+                            <div class="step">3. Contribution reconnue</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">🥾</div>
+                        <h3>Tourisme Respectueux sur les Sentiers GR</h3>
+                    </div>
+                    <div class="example-content">
+                        <p>QR codes sur les sentiers de Grande Randonnée pour permettre aux visiteurs d'envoyer un geste de respect.</p>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> Des randonneurs passant sur les terres coutumières peuvent scanner un QR code et contribuer respectueusement à la communauté locale.
+                        </div>
+                        <div class="example-steps">
+                            <div class="step">1. Scan du QR code</div>
+                            <div class="step">2. Geste de respect</div>
+                            <div class="step">3. Redistribution équitable</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h3>Fonctionnalités Clés</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">💎</span>
+                        <span class="feature-text">Gestes numériques (NFT symboliques)</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚖️</span>
+                        <span class="feature-text">Système de redistribution équitable</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📱</span>
+                        <span class="feature-text">Interface mobile moderne</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🏛️</span>
+                        <span class="feature-text">Respect des traditions coutumières</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi participer -->
+    <section id="participer" class="participate">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pourquoi Rejoindre Newkal ?</h2>
+                <p class="section-subtitle">Ensemble, construisons l'avenir numérique du Pacifique</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌊</div>
+                    <h3>Préserver la Culture</h3>
+                    <p>Contribuez à la sauvegarde et à la transmission des traditions du Pacifique à travers les nouvelles technologies.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Renforcer les Liens</h3>
+                    <p>Connectez-vous avec votre communauté, même à distance, et participez activement à la vie collective.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Bénéficier Équitablement</h3>
+                    <p>Profitez d'un système de redistribution transparent qui valorise chaque contribution à la communauté.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌱</div>
+                    <h3>Innover Durablement</h3>
+                    <p>Participez à une innovation technologique respectueuse de l'environnement et des valeurs traditionnelles.</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h3>Prêt à Rejoindre la Case Numérique ?</h3>
+                    <p>Commencez votre parcours dans la communauté Newkal dès aujourd'hui</p>
+                    <button class="btn btn--primary btn--lg btn--full-width" onclick="joinCommunity()">
+                        Rejoindre Newkal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1749535875/gpt4o_images/nvrdgncs01oxkdfrq3z2.png" alt="Logo Newkal" class="footer-logo">
+                    <h4>Newkal (NKL)</h4>
+                    <p>La case numérique du Pacifique</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h5>Communauté</h5>
+                        <a href="#" target="_blank">Discord</a>
+                        <a href="#" target="_blank">Telegram</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h5>Ressources</h5>
+                        <a href="#">Documentation</a>
+                        <a href="#">Guide d'utilisation</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h5>Contact</h5>
+                        <a href="mailto:contact@newkal.com">contact@newkal.com</a>
+                        <a href="#">Support</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Newkal. Tous droits réservés. Fait avec ❤️ pour le Pacifique.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
