@@ -1382,7 +1382,7 @@ section {
   transform: translateY(-2px);
 }
 
-.exemple-image {
+.example-image {
   width: 100%;           /* L’image prend toute la largeur du conteneur */
   max-width: 350px;      /* Largeur maximale (à ajuster selon ton design) */
   height: auto;          /* Hauteur automatique pour garder les proportions */
