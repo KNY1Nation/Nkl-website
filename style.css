@@ -1382,9 +1382,14 @@ section {
   transform: translateY(-2px);
 }
 
-.example-image {
-  margin-bottom: var(--space-16);
-  text-align: center;
+.exemple-image {
+  width: 100%;           /* L’image prend toute la largeur du conteneur */
+  max-width: 350px;      /* Largeur maximale (à ajuster selon ton design) */
+  height: auto;          /* Hauteur automatique pour garder les proportions */
+  display: block;        /* Supprime les espaces indésirables */
+  margin: 0 auto;        /* Centre l’image horizontalement */
+  border-radius: 12px;   /* Coins arrondis optionnels pour un look moderne */
+  object-fit: cover;     /* Coupe l’image si besoin pour remplir le cadre */
 }
 
 .example-img {
